@@ -1,5 +1,5 @@
 #!/bin/bash
 
-DATE=$(ls -l)
+DATE=$(date)
 
 echo "script started executing: $DATE"
