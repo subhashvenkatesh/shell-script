@@ -1,7 +1,7 @@
 #!/bin/bash
 
-NUMBER1=888
-NUMBER2=888
+NUMBER1=$g
+NUMBER2=$h
 
 SUM=$(($NUMBER1+$NUMBER2))
 
