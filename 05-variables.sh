@@ -9,3 +9,5 @@ echo "username is: $USERNAME" # I am printing just for validation, you should no
 echo "Please enter your password"
 
 read -s PASSWORD
+
+echo "passwordd is: $PASSWORD"
