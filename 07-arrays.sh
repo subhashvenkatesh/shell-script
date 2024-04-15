@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#comment
+
 FRUITS=("APPLE" "BANANA" "MANGO")
 
 echo "first fruit is: $FRUITS[0]"
