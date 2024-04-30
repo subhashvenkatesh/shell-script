@@ -21,7 +21,7 @@ else
     echo "MySQL installed successfully"
 fi
 
-yum install git -y
+yum install gkit -y
 
 if [ $? -ne 0 ]
 then
