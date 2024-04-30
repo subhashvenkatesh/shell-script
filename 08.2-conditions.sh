@@ -2,7 +2,7 @@
 
 NUMBER=$1
 
-if [ $NUMBER -et 100 ]
+if [ $NUMBER -le 100 ]
 
 then
 
