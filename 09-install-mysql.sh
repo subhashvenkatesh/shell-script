@@ -10,4 +10,6 @@ else
 
 fi
 
+$?
+
 yum install mysql -y
