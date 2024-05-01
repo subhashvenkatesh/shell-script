@@ -15,11 +15,11 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
     then
-    echo "$2 ....$R Failed $N"
+    echo -e "$2 ....$R Failed $N"
     exit 1
     
     else
-        echo "$2....$G Success $N"
+        echo -e "$2....$G Success $N"
     fi
 
 }
@@ -27,10 +27,10 @@ VALIDATE(){
     if [ $ID -ne 0 ]
     
     then
-     echo "ERROR: Please run this script with root access"
+     echo -e "$R ERROR: Please run this script with root access $N"
      exit 1
     else
-     echo "you are root user"
+     echo -e "$Y you are root user $N"
 
     fi
 
