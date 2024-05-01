@@ -27,8 +27,8 @@ VALIDATE(){
 
 yum install mysql -y &>> temp.log
 
-    VALIDATE $? Installing MySQL
+    VALIDATE $? "Installing MySQL"
 
 yum install git -y &>> temp.log
 
-    VALIDATE $? Installing Git
+    VALIDATE $? "Installing Git"
