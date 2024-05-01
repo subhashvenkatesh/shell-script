@@ -11,7 +11,7 @@ else
 
 fi
 
-yum install mysoql -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then
@@ -29,4 +29,14 @@ then
     exit 1
 else
     echo "Git is installed successfully"
+fi
+
+yum install java
+
+if [ $? -ne 0 ]
+
+then
+   echo "ERROR: installing Java is failed"
+else
+    echo "Java installed successfully"
 fi
