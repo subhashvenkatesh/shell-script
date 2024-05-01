@@ -6,31 +6,33 @@ VALIDATE(){
 
     if [ $? -ne 0 ]
     then
-    echo "ERROR : Installing tool is failed"
+    echo "ERROR : Installing is failed"
     exit 1
+    
     else
-        echo "tool is installed successfully"
+        echo "Installed successfully"
     fi
 
 }
 
-if [ $ID -ne 0 ]
-then
-   echo "ERROR: Please run this script with root access"
-   exit 1
-else
-   echo "you are root user"
+    if [ $ID -ne 0 ]
+    
+    then
+     echo "ERROR: Please run this script with root access"
+     exit 1
+    else
+     echo "you are root user"
 
-fi
+    fi
 
 yum install mysql -y
 
-VALIDATE
+    VALIDATE
 
 yum install git -y
 
-VALIDATE
+    VALIDATE
 
-yum install java -y
+yum remove java -y
 
-VALIDATE
+    VALIDATE
