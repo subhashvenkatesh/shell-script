@@ -31,6 +31,6 @@ yum install git -y
 
 VALIDATE
 
-yum install java
+yum install java -y
 
 VALIDATE
