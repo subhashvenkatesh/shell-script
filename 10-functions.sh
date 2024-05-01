@@ -4,13 +4,13 @@ ID=$(id -u)
 
 VALIDATE(){
 
-if [ $? -ne 0 ]
-then
-   echo "ERROR : Installing tool is failed"
-   exit 1
-else
-    echo "tool is installed successfully"
-fi
+    if [ $? -ne 0 ]
+    then
+    echo "ERROR : Installing tool is failed"
+    exit 1
+    else
+        echo "tool is installed successfully"
+    fi
 
 }
 
