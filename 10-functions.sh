@@ -25,10 +25,10 @@ VALIDATE(){
 
     fi
 
-yum install mysql -y &>> temp.log
+yum install mysql -y
 
     VALIDATE $? "Installing MySQL"
 
-yum install git -y &>> temp.log
+yum install git -y
 
     VALIDATE $? "Installing Git"
