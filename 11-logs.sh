@@ -1,15 +1,11 @@
 #!/bin/bash
 
 ID=$(id -u)
-TIMESTAMP=$(date +%F-%H-%M-%S)
-echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
+
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-
-LOGFILE="/tmp/$0-$TIMESTAMP.log"
-
 
 VALIDATE(){
 
@@ -34,10 +30,10 @@ VALIDATE(){
 
     fi
 
-yum install mysql -y &>> $LOGFILE
+yum install mysql -y
 
     VALIDATE $? "Installing MySQL"
 
-yum install git -y &>> $LOGFILE
+yum install git -y
 
     VALIDATE $? "Installing Git"
