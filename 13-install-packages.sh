@@ -2,6 +2,10 @@
 
 ID=$(id -u)
 
+TIMESTAMP=$(date +%F-%H-%M-%s)
+
+LOGFILE="/temp/$0-$TIMESTAMP.log"
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
@@ -25,7 +29,7 @@ do
     yum installed $package
     if [ $? -ne 0 ]
     then
-        yum install $package -y
+        yum install $package -y &>> $LOGFILE
         VALIDATE $? "Installation of $package"
     else
         echo "$package already installed.....skipping"
