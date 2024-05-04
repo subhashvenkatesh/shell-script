@@ -13,7 +13,7 @@ if [ $1 -ne 0 ]
 then 
 echo "$2...FAIlED "
 else
- echo -e "$2... SUCCESS"
+ echo "$2... SUCCESS"
 fi
 
 }
@@ -28,13 +28,12 @@ else
 fi
 
 for package in $@
-
 do
 yum list installed $package
 
 done
 
-if[ $? -ne 0 ]
+if [ $? -ne 0 ]
 then
     yum install $package -y
 VALIDATE $? "installation of $package"
