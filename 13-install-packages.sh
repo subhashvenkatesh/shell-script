@@ -2,12 +2,17 @@
 
 ID=(id -u)
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 if [ $ID -ne 0 ]
 then
-    echo "ERROR: Please run this script with root access"
+    echo -e "$R ERROR:$N $Y Please run this script with root access $N"
     exit 1
 else
-    echo "Your root user"
+    echo -e "$G Your root user $N"
 fi
 
-echo "All args passed :$@"
+echo -e "$Y All args passed :$@ $N"
