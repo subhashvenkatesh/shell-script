@@ -12,7 +12,7 @@ if [ $ID -ne 0 ]
 
 then
    
-   echo -e "$R ERROR: Try with root user $N"
+   echo -e"$R ERROR: Try with root user $N"
    exit 1
 else
     echo -e "$G your a root user $N"
