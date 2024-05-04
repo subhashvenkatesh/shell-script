@@ -8,7 +8,7 @@ Y="\e[33m"
 N="\e[0m"
 
 VALIDATE(){
-    
+
 if [ $1 -ne 0 ]
 then 
 echo "$2...FAIlED "
@@ -29,7 +29,6 @@ fi
 
 for package in $@
 do
-
 yum list installed $package
 
 if [ $? -ne 0 ]
@@ -39,4 +38,6 @@ then
     yum install $package -y
 
     VALIDATE $? "installation of $package"
+fi
+
 done
