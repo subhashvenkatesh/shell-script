@@ -9,6 +9,5 @@ then
 else
     echo "Your root user"
 
-
 echo "All args passed : $@"
 
