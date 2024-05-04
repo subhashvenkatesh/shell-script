@@ -34,7 +34,7 @@ if [ $? -ne 0 ]
 
 then
    echo "installing git is failed"
-   exit
+   exit1
 else
     echo "Git installed Successfully"
 
