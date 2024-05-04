@@ -28,3 +28,15 @@ else
      echo -e "$G Installing MySql is Success $N"
 fi             
    
+yum install git -y
+
+if [ $? -ne 0 ]
+
+then
+   echo "installing git is failed"
+   exit
+else
+    echo "Git installed Successfully"
+
+fi
+
