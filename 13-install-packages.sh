@@ -8,5 +8,6 @@ then
     exit 1
 else
     echo "Your root user"
+fi
 
 echo "All args passed :$@"
