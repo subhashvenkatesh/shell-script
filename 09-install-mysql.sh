@@ -2,14 +2,20 @@
 
 ID=$(id -u)
 
+R=\e[31m
+G=\e[32m
+Y=\e[33m
+N=\e[0m
+
+
 if [ $ID -ne 0 ]
 
 then
    
-   echo "ERROR: Try with root user"
+   echo -e "$R ERROR: Try with root user $N"
    exit 1
 else
-    echo "your a root user"
+    echo -e "$G your a root user $N"
 fi    
 
 yum install mysqql -y
@@ -17,9 +23,9 @@ yum install mysqql -y
 if [ $? -ne 0 ]
 
 then
-     echo "installing MySql is failed"
-     
+     echo -e "$R installing MySql is failed $N"
+     exit 1
 else 
-     echo "Installing MySql is Success"
+     echo -e "$G Installing MySql is Success $N"
 fi             
    
