@@ -2,6 +2,11 @@
 
 ID=$(id -u)
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 TIMESTAMP=$(date +%F-%H-%M-%s)
 
 LOGFILE="/temp/$0-$TIMESTAMP.log"
@@ -9,17 +14,17 @@ LOGFILE="/temp/$0-$TIMESTAMP.log"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-    echo "$2...Failed"
+    echo -e "$R $2...Failed $N"
     else
-    echo "$2...Success"
+    echo -e "$G $2...Success $N"
     fi
 }
 if [ $ID -ne 0 ]
 
 then 
-    echo "ERROR:Try with root access"
+    echo -e "$R ERROR:Try with root access $N"
 else    
-    echo "Your a root user"
+    echo -e "$G Your a root user $N"
 fi
 
 #echo "All args passed: $@"
@@ -32,6 +37,6 @@ do
         yum install $package -y &>> $LOGFILE
         VALIDATE $? "Installation of $package"
     else
-        echo "$package already installed.....skipping"
+        echo -e "$Y $package already installed.....skipping $N"
     fi    
 done
