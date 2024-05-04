@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "Hello shell scripty"
+echo "Hello shell script"
