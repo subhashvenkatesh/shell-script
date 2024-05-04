@@ -38,6 +38,8 @@ then
     yum install $package -y
 
     VALIDATE $? "installation of $package"
+else
+    echo "$package is already installed...skipping"
 fi
 
 done
